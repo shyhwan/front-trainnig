@@ -21,9 +21,15 @@ fetch('../html/footer.html')
  */
 const modalShow = () => {
     const modal = PickEle('.modal');
+    const body = PickEle('body');
+    const gardeDiv = CreateEle('div');
+
     if (modal.style.display === 'none') {
+        gardeDiv.id = 'garde';
+        body.appendChild(gardeDiv);
         modal.style.display = '';
     } else {
+        PickEle('#garde').remove();
         modal.style.display = 'none';
     }
 };
@@ -31,6 +37,7 @@ const modalShow = () => {
 const modalClose = () => {
     const modal = PickEle('.modal');
     modal.style.display = 'none';
+    PickEle('#garde').remove();
 };
 
 PickEle('#loginBtn').addEventListener('click', modalShow);

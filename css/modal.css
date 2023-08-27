@@ -7,6 +7,7 @@
     left: 35%;
     border: 1px solid gray;
     border-radius: 0.8rem;
+    z-index: 1;
 }
 
 .modalHeader {
@@ -14,6 +15,7 @@
     background-color: orange;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5rem;
     height: 10%;
     border-top-left-radius: 0.8rem;
@@ -31,4 +33,14 @@
 
 .modalFooter {
     height: 10%;
+}
+
+#garde {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: 0.5;
 }
