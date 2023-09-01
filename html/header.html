@@ -2,6 +2,18 @@
     <img class="logo-s img" src="../img/logo.png" alt="" onclick="location.href='index.html'" />
     <div class="btn-con">
         <button class="btn comBtn loginBtn" id="loginBtn">Login</button>
-        <button class="btn comBtn" onclick="location.href='signIn.html'">Sign-In</button>
+        <button class="btn comBtn" id="signInBtn">Sign-In</button>
     </div>
+</div>
+<div class="modal" style="display: none">
+    <div class="modalHeader">
+        <span>Login Modal</span>
+        <button class="modalClose btn closeBtn">X</button>
+    </div>
+    <div class="modalBody">
+        <input type="text" placeholder="ID" />
+        <input type="password" placeholder="Password" />
+        <button class="modalOk btn submitBtn">로그인</button>
+    </div>
+    <div class="modalFooter"></div>
 </div>

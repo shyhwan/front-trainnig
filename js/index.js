@@ -1,9 +1,9 @@
 'use strict';
 
-import { header, footer, PickEle, CreateEle } from './elements.js';
+import { header, PickEle, CreateEle } from './elements.js';
 
 /**
- * Header, Footer 세팅
+ * Header, Footer, Main 세팅
  */
 await fetch('../html/header.html')
     .then((res) => res.text())
@@ -12,9 +12,13 @@ await fetch('../html/header.html')
         header.innerHTML = data;
     });
 
-fetch('../html/footer.html')
+await fetch('../html/footer.html')
     .then((res) => res.text())
     .then((data) => (PickEle('footer').innerHTML = data));
+
+await fetch('../html/main.html')
+    .then((res) => res.text())
+    .then((data) => (PickEle('main').innerHTML = data));
 
 /**
  * Modal
@@ -40,5 +44,41 @@ const modalClose = () => {
     PickEle('#garde').remove();
 };
 
+/**
+ * Sign-In
+ */
+const goSignIn = async () => {
+    await fetch('signIn.html')
+        .then((res) => res.text())
+        .then((data) => {
+            PickEle('main').innerHTML = data;
+        });
+};
+
+/**
+ * board
+ */
+const goBoard = async () => {
+    await fetch('page.html')
+        .then((res) => res.text())
+        .then((data) => {
+            PickEle('main').innerHTML = data;
+        });
+};
+
+/**
+ * board detail
+ */
+const goDetail = async () => {
+    await fetch('edit.html')
+        .then((res) => res.text())
+        .then((data) => {
+            PickEle('main').innerHTML = data;
+        });
+};
+
+PickEle('#signInBtn').addEventListener('click', goSignIn);
 PickEle('#loginBtn').addEventListener('click', modalShow);
 PickEle('.closeBtn').addEventListener('click', modalClose);
+PickEle('caption').addEventListener('click', goBoard);
+PickEle('#tr').addEventListener('click', goDetail);

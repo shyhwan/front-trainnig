@@ -1,41 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/reset.css" />
-        <link rel="stylesheet" href="../css/btn.css" />
-        <link rel="stylesheet" href="../css/common.css" />
-        <link rel="stylesheet" href="../css/layout.css" />
-        <title>Sign-In</title>
-        <script src="../js/index.js" type="module" defer></script>
-    </head>
-    <body>
-        <header></header>
-        <main>
-            <div class="main">
-                <div class="l-content"></div>
-                <div class="m-content form-con">
-                    <form action="#">
-                        <h1>SIGN-IN</h1>
-                        <input id="userId" type="text" placeholder="ID" required />
-                        <input id="userPw" type="password" placeholder="Password" required />
-                        <input id="checkPW" type="password" placeholder="check-Password" required />
-                        <input id="userName" type="text" placeholder="Name" required />
-                        <input id="eMail" type="text" placeholder="E-Mail" />
-                        <div>
-                            <label class="agree" for="agree">
-                                <input id="agree" class="agree" type="checkbox" required />
-                                위 개인정보 사용에 동의 합니다.
-                            </label>
-                        </div>
-                        <button id="submitBtn" class="btn">가입하기</button>
-                        <button id="cancelBtn" class="btn" onclick="location.href='index.html'">돌아가기</button>
-                    </form>
-                </div>
-                <div class="r-content"></div>
+<div class="main">
+    <div class="l-content"></div>
+    <div class="m-content form-con">
+        <form action="#">
+            <h1>SIGN-IN</h1>
+            <input id="userId" type="text" placeholder="ID" required />
+            <input id="userPw" type="password" placeholder="Password" required />
+            <input id="checkPW" type="password" placeholder="check-Password" required />
+            <input id="userName" type="text" placeholder="Name" required />
+            <input id="eMail" type="text" placeholder="E-Mail" />
+            <div>
+                <label class="agree" for="agree">
+                    <input id="agree" class="agree" type="checkbox" required />
+                    위 개인정보 사용에 동의 합니다.
+                </label>
             </div>
-        </main>
-        <footer></footer>
-    </body>
-</html>
+            <button id="submitBtn" class="btn">가입하기</button>
+            <button id="cancelBtn" class="btn" onclick="location.href='index.html'">돌아가기</button>
+        </form>
+    </div>
+    <div class="r-content"></div>
+</div>
